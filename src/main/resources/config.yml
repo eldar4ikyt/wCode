@@ -1,0 +1,30 @@
+# Создатель плагина WinLocker - vk.com/winlocker02
+# Права:
+# wcode.code - Доступ к команде /code
+# wcode.bypasslimit - Обход ограничений
+# wcode.reload - Доступ к команде /codereload
+
+codes:
+    'test test test': # Сам код, /code test test test
+        limit: 2 # Макс. кол-во использований 3
+        limit-players: 2 # Макс. кол-во игроков которые введут этот код
+        commands: # Команды от имени консоли
+            - 'eco give %player% 1000'
+        message: 'Вы успешно активировали код;title: &cКоды %nl% Код успешно активирован.'
+        message-limit: 'Вы исчерпали лимит использования данного кода.;title: &cКоды %nl% Лимит изчерпан'
+        message-limit-players: 'Данный промокод много раз вводили;title: &cКоды %nl% Код не доступен.'
+    test2:
+        limit: 3
+        limit-players: 10
+        commands: 
+            - 'eco give %player% 5999'
+        message: 'Вы успешно активировали код;title: &cКоды %nl% Код успешно активирован.'
+        message-limit: 'Вы исчерпали лимит использования данного кода.;title: &cКоды %nl% Лимит изчерпан'
+        message-limit-players: 'Данный промокод много раз вводили;title: &cКоды %nl% Код не доступен.'
+        
+messages:
+    prefix: '&cКоды &e| &f'
+    no-permission: 'У вас нет прав.'
+    code-notfound: 'Данный промокод не найден.'
+    codereload: 'Конфигурация перезагружена.'
+    code: '&c/code [код] &f- Ввести промокод'

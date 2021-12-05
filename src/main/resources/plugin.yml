@@ -1,0 +1,9 @@
+name: wCode
+author: WinLocker
+version: 1.0
+main: ru.winlocker.wcode.Main
+commands:
+    code:
+        aliases: [wcode]
+    codereload:
+        aliases: [wcodereload]
