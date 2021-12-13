@@ -13,6 +13,7 @@ public class ExecuteCodeReload implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if(!Utils.has(sender, "wcode.reload")) {
+            // Message no permission is empty??
             return true;
         }
         Utils.reloadConfig();
